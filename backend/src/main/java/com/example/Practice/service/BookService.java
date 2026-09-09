@@ -18,7 +18,7 @@ public class BookService
     static {
         books.add(new Book(2,"Marathi","Balasaheb Shinde"));
         books.add(new Book(3,"Science","Aaba Pakhre"));
-        books.add(new Book(4,"Englsh","Vaibhav Rane"));
+        books.add(new Book(4,"English","Vaibhav Rane"));
 
     }
 
