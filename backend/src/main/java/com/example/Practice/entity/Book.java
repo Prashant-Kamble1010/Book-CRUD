@@ -230,11 +230,17 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" +
+<<<<<<< HEAD
                 "bookId=" + bookId +
                 ", title='" + title + '\'' +
                 ", autor='" + autor + '\'' +
                 ", category='" + category + '\'' +
                 ", status='" + status + '\'' +
+=======
+                "bookId =" + bookId +
+                ", title ='" + title + '\'' +
+                ", autor ='" + autor + '\'' +
+>>>>>>> 5333772ddb7a903120a97fba3b4a0eae2c973875
                 '}';
     }
 }
