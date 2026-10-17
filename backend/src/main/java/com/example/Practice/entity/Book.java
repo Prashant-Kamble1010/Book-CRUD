@@ -16,7 +16,7 @@ public class Book {
 
     @Column(name = "autor")
     @JsonProperty("autor")
-    @JsonAlias({"autor", "author"})
+    @JsonAlias({ "autor", "author" })
     private String autor;
 
     private String category;
@@ -50,8 +50,8 @@ public class Book {
     }
 
     public Book(Integer bookId, String title, String autor, String category, String description,
-                String isbn, Double price, Integer publishedYear, Integer pages,
-                String status, Double rating, String coverImageUrl) {
+            String isbn, Double price, Integer publishedYear, Integer pages,
+            String status, Double rating, String coverImageUrl) {
         this.bookId = bookId;
         this.title = title;
         this.autor = autor;
@@ -76,7 +76,8 @@ public class Book {
         if (this.category == null || this.category.trim().isEmpty()) {
             if (this.title != null) {
                 String lower = this.title.toLowerCase();
-                if (lower.contains("c++") || lower.contains("java") || lower.contains("kotlin") || lower.contains("python") || lower.contains("code")) {
+                if (lower.contains("c++") || lower.contains("java") || lower.contains("kotlin")
+                        || lower.contains("python") || lower.contains("code")) {
                     this.category = "Programming";
                 } else if (lower.contains("science") || lower.contains("physics") || lower.contains("chemistry")) {
                     this.category = "Science";
@@ -115,9 +116,9 @@ public class Book {
         }
 
         if (this.description == null || this.description.trim().isEmpty()) {
-            this.description = "A valuable volume on " + (this.title != null ? this.title : "this subject") + 
-                               " by " + (this.autor != null ? this.autor : "an esteemed author") + 
-                               ". Part of the library's curated catalog.";
+            this.description = "A valuable volume on " + (this.title != null ? this.title : "this subject") +
+                    " by " + (this.autor != null ? this.autor : "an esteemed author") +
+                    ". Part of the library's curated catalog.";
         }
     }
 
@@ -230,17 +231,12 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" +
-<<<<<<< HEAD
+
                 "bookId=" + bookId +
                 ", title='" + title + '\'' +
                 ", autor='" + autor + '\'' +
                 ", category='" + category + '\'' +
                 ", status='" + status + '\'' +
-=======
-                "bookId =" + bookId +
-                ", title ='" + title + '\'' +
-                ", autor ='" + autor + '\'' +
->>>>>>> 5333772ddb7a903120a97fba3b4a0eae2c973875
                 '}';
     }
 }
